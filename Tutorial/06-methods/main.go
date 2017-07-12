@@ -18,12 +18,12 @@ func methodType() float64 {
 	return v.Abs()
 }
 
-func (v* Vertex) Scale (f float64) {
+func (v *Vertex) Scale(f float64) {
 	v.X = v.X * f
 	v.Y = v.Y * f
 }
 
-func methodPointer()  {
+func methodPointer() {
 	v := Vertex{2, 4}
 	v.Scale(2)
 	println(v.X, v.Y)
@@ -31,7 +31,8 @@ func methodPointer()  {
 
 func main() {
 	println(methodType())
-	fmt.Println(); fmt.Println()
+	fmt.Println()
+	fmt.Println()
 	methodPointer()
 
 }

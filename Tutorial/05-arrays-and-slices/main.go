@@ -32,16 +32,16 @@ func slices() {
 	fmt.Println(primes)
 
 	//Slice literals
-	sliceLiterals := []int {1, 2, 3, 4, 5}
+	sliceLiterals := []int{1, 2, 3, 4, 5}
 	fmt.Println(sliceLiterals)
 
 	//Slice literals with structs
 
-	vertexStruct := []struct{
+	vertexStruct := []struct {
 		X int
 		Y bool
 	}{
-		{0 , true},
+		{0, true},
 		{1, false},
 		{2, true},
 		{3, true},
@@ -77,7 +77,7 @@ func slicesMake() {
 }
 
 func sliceOfSlice() {
-	board := [][]string {
+	board := [][]string{
 		{"_", "_", "_"},
 		{"_", "_", "_"},
 		{"_", "_", "_"},
@@ -97,7 +97,7 @@ func sliceOfSlice() {
 }
 
 func sliceAppending() {
-	var slice[]int
+	var slice []int
 	fmt.Println(slice)
 
 	slice = append(slice, 123)
@@ -112,13 +112,13 @@ func sliceAppending() {
 
 }
 
-func sliceExample(dx, dy int) [][]uint8{
+func sliceExample(dx, dy int) [][]uint8 {
 	//return slice of lenght dy
 	fakeImage := make([][]uint8, dy)
-	for y := 0 ; y < dy ; y ++ {
+	for y := 0; y < dy; y++ {
 		fakeImage[y] = make([]uint8, dx)
-		for x := 0 ; x < dx; x++ {
-			fakeImage[y][x] = uint8((x+y)/2)
+		for x := 0; x < dx; x++ {
+			fakeImage[y][x] = uint8((x + y) / 2)
 		}
 	}
 	fmt.Println(fakeImage)
@@ -133,9 +133,17 @@ func maps() {
 
 	var m map[string]Vertex
 
+	//First way to create a map
 	m = make(map[string]Vertex)
-	m["test"] = Vertex{ 1, 2 }
-	m["test2"] = Vertex{ 3 , 4}
+	m["test"] = Vertex{1, 2}
+	m["test2"] = Vertex{3, 4}
+
+	//or short way
+	m2 := map[string]Vertex{
+		"test":  Vertex{1, 2},
+		"test2": Vertex{1, 2},
+	}
+	fmt.Println(m2)
 
 	fmt.Println(m)
 	fmt.Println(m["test"])
@@ -161,8 +169,8 @@ func mapsExample(s string) map[string]int {
 	return ret
 }
 
-func fibonacci() func() int{
-	counter, first, second  := 0, 0, 1
+func fibonacci() func() int {
+	counter, first, second := 0, 0, 1
 	//0, 0, 1 -> 0, 1, 1
 	//0, 1, 1 -> 1, 1, 2
 	//1, 1, 2 -> 1, 2, 3
@@ -175,7 +183,7 @@ func fibonacci() func() int{
 	}
 }
 
-func runFibonacci () {
+func runFibonacci() {
 	f := fibonacci()
 	for i := 0; i < 10; i++ {
 		fmt.Println(f())
@@ -184,21 +192,28 @@ func runFibonacci () {
 
 func main() {
 	arrays()
-	fmt.Println(); fmt.Println()
+	fmt.Println()
+	fmt.Println()
 	slices()
-	fmt.Println(); fmt.Println()
+	fmt.Println()
+	fmt.Println()
 	slicesMake()
-	fmt.Println(); fmt.Println()
+	fmt.Println()
+	fmt.Println()
 	sliceOfSlice()
-	fmt.Println(); fmt.Println()
+	fmt.Println()
+	fmt.Println()
 	sliceAppending()
-	fmt.Println(); fmt.Println()
-	sliceExample(4,4)
-	fmt.Println(); fmt.Println()
+	fmt.Println()
+	fmt.Println()
+	sliceExample(4, 4)
+	fmt.Println()
+	fmt.Println()
 	maps()
-	fmt.Println(); fmt.Println()
+	fmt.Println()
+	fmt.Println()
 	mapsExample("ciao io sono ciao ")
-	fmt.Println(); fmt.Println()
+	fmt.Println()
+	fmt.Println()
 	runFibonacci()
 }
-

@@ -17,7 +17,6 @@ func pointers() {
 	//Print the value in that memory area (for y)
 	fmt.Println(*pointY)
 
-
 	//Arithmetic on the pointed value is OK
 	*pointX = *pointX + 10
 	fmt.Println(*pointX)
@@ -44,7 +43,8 @@ func structs() {
 	fmt.Println("Display Y of the vertex")
 	fmt.Println(v.Y)
 
-	fmt.Println(); fmt.Println()
+	fmt.Println()
+	fmt.Println()
 
 	fmt.Println("Using pointer on struct???")
 	var pointStruct *Vertex

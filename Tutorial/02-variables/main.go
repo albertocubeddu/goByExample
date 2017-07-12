@@ -6,9 +6,9 @@ import (
 )
 
 var (
-	aBool 	bool		= true
-	MaxInt	uint64 		= 1<<64-1 //Shifting left of 63 bit
-	z	complex128 	= cmplx.Sqrt(-5 + 12i)
+	aBool  bool       = true
+	MaxInt uint64     = 1<<64 - 1 //Shifting left of 63 bit
+	z      complex128 = cmplx.Sqrt(-5 + 12i)
 )
 
 func main() {

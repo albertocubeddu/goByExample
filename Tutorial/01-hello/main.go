@@ -2,21 +2,21 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"math/rand"
+	"time"
 )
 
 // Function that add two value
 // @params : integer, integer
 // @return : integer - the two params summed
-func add (x int, y int) int {
+func add(x int, y int) int {
 	return x + y
 }
 
 //Function that print out the value of two variable by passing the reference at the top
 // @params : integer
 // @return : integer, integer - one param added by itself and other part multiply by itself
-func processValue (value int) (x, y int) {
+func processValue(value int) (x, y int) {
 	x = value + value
 	y = value * value
 	return
